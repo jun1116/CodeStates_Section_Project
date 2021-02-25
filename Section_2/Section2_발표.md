@@ -1,26 +1,14 @@
 # AI부트캠프_01_장형준_Section2_Project
 
-날짜: 2021년 2월 22일 → 2021년 2월 25일
-
-[목차]
-
----
-
 # Project 기획, 분석배경
 
 새로운 교통수단 패러다임으로, 개인형 이동수단을 지칭하는 Personal Mobility (이하 PM)이 떠오르고 있으며, 이는 주로 전기를 동력으로 하여 친환경적이고, 1~2인이 이용하는 교통수단을 지칭합니다. 
 
-![https://image.chosun.com/sitedata/image/201911/18/2019111801156_0.png](https://image.chosun.com/sitedata/image/201911/18/2019111801156_0.png)
-
-출처 : 아이나비 스포츠 로드기어
-
-![https://img7.yna.co.kr/etc/inner/KR/2019/07/19/AKR20190719014000057_01_i_P4.jpg](https://img7.yna.co.kr/etc/inner/KR/2019/07/19/AKR20190719014000057_01_i_P4.jpg)
-
-출처 : 카카오T 바이크
-
-![https://media.giphy.com/media/vBHN70eHOAIxZL4DKB/giphy.gif](https://media.giphy.com/media/vBHN70eHOAIxZL4DKB/giphy.gif)
-
-![https://media.giphy.com/media/3oKIPjagnSA6mZWS1G/giphy.gif](https://media.giphy.com/media/3oKIPjagnSA6mZWS1G/giphy.gif)
+전동킥보드|전기자전거
+:---:|:---: 
+<img src='https://image.chosun.com/sitedata/image/201911/18/2019111801156_0.png' width='300px'/> | <img src='https://img7.yna.co.kr/etc/inner/KR/2019/07/19/AKR20190719014000057_01_i_P4.jpg' width='300px'/>
+(아이나비 스포츠 로드 기어)|(카카오T 바이크) 
+<img src='https://media.giphy.com/media/vBHN70eHOAIxZL4DKB/giphy.gif' width='300px'/>|<img src='https://media.giphy.com/media/3oKIPjagnSA6mZWS1G/giphy.gif' width='300px'/>
 
 또한, 다수의 업체들이 지자체와의 협약 또는 자체적으로 특정 지역에서 (주로 시 단위에서) 공유자전거 및 공유전동킥보드 사업을 하고있습니다. 
 
@@ -42,17 +30,23 @@
 
 지역범위를 크게하면 해당 지역의 특성 (대학가, 주택가, 중심업무지구, 지하철역근처, 유흥가 등) 이 약해질 수 있으며, 이렇게 상향평준화된 대여량예측을 하며, 결국 어딘가의 대여소는 늘 부족한 상태이고, 다른 대여소는 늘 PM들이 놀고있는 상태가 될 수 있으므로, 지역범위를 축소하였으며, 축소는 임의로 진행하여 저에게 가장 익숙하고 지하철역 근처이며 유흥가이기도한 강남역 근처의 대여소 5곳으로 한정하였습니다. 
 
-![AI%E1%84%87%E1%85%AE%E1%84%90%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%B3_01_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%AB_Section2_Project%20c3fec14cc06b442cb6d0803bc0facac5/Untitled.png](AI%E1%84%87%E1%85%AE%E1%84%90%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%B3_01_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%AB_Section2_Project%20c3fec14cc06b442cb6d0803bc0facac5/Untitled.png)
-
-대여소
-
-![AI%E1%84%87%E1%85%AE%E1%84%90%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%B3_01_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%AB_Section2_Project%20c3fec14cc06b442cb6d0803bc0facac5/Untitled%201.png](AI%E1%84%87%E1%85%AE%E1%84%90%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%B3_01_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%AB_Section2_Project%20c3fec14cc06b442cb6d0803bc0facac5/Untitled%201.png)
-
----
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5rovm%2FbtqXoa7xmcc%2FzQ0WXHITzoEegdQPySKQZK%2Fimg.png" width="400"/>  
 
 전체 데이터
+<img src="https://github.com/jun1116/CodeStates_Section_Project/blob/master/Section_2/images/Untitled%202.png?raw=true" width="400"/>  
 
-![AI%E1%84%87%E1%85%AE%E1%84%90%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%B3_01_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%AB_Section2_Project%20c3fec14cc06b442cb6d0803bc0facac5/Untitled%202.png](AI%E1%84%87%E1%85%AE%E1%84%90%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%B3_01_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%AB_Section2_Project%20c3fec14cc06b442cb6d0803bc0facac5/Untitled%202.png)
+대여소
+<img src="https://github.com/jun1116/CodeStates_Section_Project/blob/master/Section_2/images/Untitled%201.png?raw=true" width="400"/>  
+
+대여소번호|보관소명|자치구|상세주소|위도|경도
+---|---|---|---|---|---
+2407|역삼.서초.삼성 세무서 앞 (역삼빌딩 앞)|강남구|강남구 역삼동 804|37.498470|127.030113
+2231|삼성타운(삼성생명) A동 맞은편|서초구|서울특별시 서초구 서초대로 405|37.496914|127.024963
+2505|우성아파트사거리 (기업은행앞)|서초구|서초동 1374|37.493259|127.029533
+2515|서초초등학교 후문|서초구|서울시 서초구 서운로 178|	37.498928|127.024727
+2409|역삼동 디오슈페리움 (우성아파트 사거리)|강남구|강남구 역삼동 858(강남대로 342 앞 도로)|37.492062|127.030746
+
+---
 
 # 데이터 구축 (간략)
 
@@ -70,16 +64,15 @@
 
 ## 1. 전체 데이터의 BoxPlot과 휴일과 평일의 차이
 
-![AI%E1%84%87%E1%85%AE%E1%84%90%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%B3_01_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%AB_Section2_Project%20c3fec14cc06b442cb6d0803bc0facac5/Untitled%203.png](AI%E1%84%87%E1%85%AE%E1%84%90%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%B3_01_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%AB_Section2_Project%20c3fec14cc06b442cb6d0803bc0facac5/Untitled%203.png)
-
+<img src='https://github.com/jun1116/CodeStates_Section_Project/blob/master/Section_2/images/Untitled%203.png?raw=true' width='500px'/>
 전체 데이터의 평균은 5.79이며, 왼쪽은 boxplot입니다. 박스플롯에서는 각 퍼센타일의 위치를 보여주며 안에 보이는 파란색박스가 25~75%까지의 대부분의 데이터가 들어있는 영역이며, 그 안의 선으로 평균값 (5.79)가 , 박스의 위에 약 10정도가 75퍼센타일값, 1~3 사이에 25퍼센타일값이 위치합니다. 
 
-오른쪽은 휴일과 평일의 대여량입니다. 
+<img src='https://github.com/jun1116/CodeStates_Section_Project/blob/master/Section_2/images/Untitled%204.png?raw=true' width='500px'/>
+휴일과 평일의 대여량입니다. 
 
 일반적인 토요일과 일요일 + 기준연도의 공휴일을 합쳐서 작성하였으며, 평일의 대여량이 더욱 많은것을 볼 수 있습니다. 
 
-![AI%E1%84%87%E1%85%AE%E1%84%90%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%B3_01_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%AB_Section2_Project%20c3fec14cc06b442cb6d0803bc0facac5/Untitled%204.png](AI%E1%84%87%E1%85%AE%E1%84%90%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%B3_01_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%AB_Section2_Project%20c3fec14cc06b442cb6d0803bc0facac5/Untitled%204.png)
-
+<img src='https://github.com/jun1116/CodeStates_Section_Project/blob/master/Section_2/images/Untitled%205.png?raw=true' width='500px'/>
 19,20년도 통합 월별 대여량과 시간대별 대여량입니다. 
 
 왼쪽은 봄이 시작하는 3월부터 대여량이 증가하며, 여름인 6,7,8에 조금 감소하고, 가을인 9,10,11월에 다시 증가하였다가 겨울에 감소하는 추세를 보여줍니다. 
