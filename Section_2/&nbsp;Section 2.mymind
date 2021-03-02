@@ -1,0 +1,635 @@
+{
+	"root": {
+		"id": "bklfjghr",
+		"text": "&nbsp;Section 2",
+		"icon": "fa-calendar",
+		"layout": "graph-right",
+		"shape": "ellipse",
+		"children": [
+			{
+				"id": "rjsdijbk",
+				"text": "Linear model",
+				"side": "right",
+				"children": [
+					{
+						"id": "pxeevvry",
+						"text": "<b>Simple Linear Regression</b>",
+						"children": [
+							{
+								"id": "vlndouft",
+								"text": "Ordinal Least Square"
+							}
+						]
+					},
+					{
+						"id": "kxittwxs",
+						"text": "<b>Multiple Regression</b>",
+						"children": [
+							{
+								"id": "ddhagkga",
+								"text": "Polynomial Regression",
+								"children": [
+									{
+										"id": "cfxnkwdh",
+										"text": "Degrees"
+									}
+								]
+							},
+							{
+								"id": "nhpbhjuj",
+								"text": "y=b1x1+b2x2+...+bnxn + c"
+							}
+						]
+					},
+					{
+						"id": "kjhismhy",
+						"text": "<b>Ridge, LASSO Regression</b>",
+						"shape": "box",
+						"children": [
+							{
+								"id": "lddtdyhy",
+								"text": "L1_Lasso",
+								"children": [
+									{
+										"id": "vdficzzb",
+										"text": "abs(beta)"
+									},
+									{
+										"id": "pejefmxp",
+										"text": "변수선택가능"
+									}
+								]
+							},
+							{
+								"id": "gtwmkqfe",
+								"text": "L2_Ridge",
+								"children": [
+									{
+										"id": "dxjsqscc",
+										"text": "beta^2"
+									},
+									{
+										"id": "ccbokxdz",
+										"text": "파라미터들의 제곱을 더한다"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": "rnuouzyg",
+						"text": "<b>Logistic Regression</b>",
+						"children": [
+							{
+								"id": "sqsymugn",
+								"text": "Odds"
+							},
+							{
+								"id": "ziypyurg",
+								"text": "Sigmoid"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": "zoxthprs",
+				"text": "Tree Model",
+				"side": "left",
+				"children": [
+					{
+						"id": "uzlhqqbb",
+						"text": "<b>Decision Tree</b>",
+						"shape": "box",
+						"children": [
+							{
+								"id": "obyovppk",
+								"text": "Root, Internal, Leaf Node"
+							},
+							{
+								"id": "jbpverka",
+								"text": "Gini impurity(index)"
+							},
+							{
+								"id": "mpavdsft",
+								"text": "Entropy",
+								"children": [
+									{
+										"id": "jxcmmuql",
+										"text": "Information Gain",
+										"children": [
+											{
+												"id": "jzmuyalt",
+												"text": "특정한 특성을 사용해 분할했을 때 엔트로피의 감소량"
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "howltuho",
+								"text": "from sklearn.tree import DecisionTreeClassifier",
+								"children": [
+									{
+										"id": "ccqriqlg",
+										"text": "min_samples_split",
+										"children": [
+											{
+												"id": "rqrqsmep",
+												"text": "분기를 위한 최소샘플수"
+											}
+										]
+									},
+									{
+										"id": "ppuwtjqs",
+										"text": "min_samples_leaf",
+										"children": [
+											{
+												"id": "jtkcgbpn",
+												"text": "leaf에 존재하는 최소샘플수"
+											}
+										]
+									},
+									{
+										"id": "ohukrswk",
+										"text": "max_depth",
+										"children": [
+											{
+												"id": "akqdxdft",
+												"text": "최대 깊이 -&gt; 과적합방지"
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "rnvayxgp",
+								"text": "graphviz"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": "cipyjgbd",
+				"text": "Ensemble Model",
+				"side": "right",
+				"layout": "tree-right",
+				"children": [
+					{
+						"id": "osbeurmt",
+						"text": "<b>Boosting</b>",
+						"children": [
+							{
+								"id": "ohqbvvxa",
+								"text": "이전 오차를 보완하여 가중치를 부여"
+							},
+							{
+								"id": "aqdyuygj",
+								"text": "Ada Boost",
+								"shape": "box",
+								"children": [
+									{
+										"id": "gmabodht",
+										"text": "트리를 순차적으로 만들며, 트리별로 가중치가 부여"
+									}
+								]
+							},
+							{
+								"id": "ndjyyvrw",
+								"text": "Gradient Boost",
+								"children": [
+									{
+										"id": "buowtyxh",
+										"text": "Pseudo Residual 계산을 통하여, 잔차를 새로 계산하여 학습"
+									},
+									{
+										"id": "tyodkwwh",
+										"text": "XGBoost",
+										"shape": "box",
+										"children": [
+											{
+												"id": "pacolfxs",
+												"text": "Similarity Score"
+											},
+											{
+												"id": "icudbelo",
+												"text": "Gain &lt; Gamma 이면,&nbsp; 해당 brunch 삭제 (루트까지반복시행)"
+											},
+											{
+												"id": "wzunjnzi",
+												"text": "lambda : 개별관측치에 대한 예측의 민감도를 낮추는 정규화 파라미터<br>",
+												"children": [
+													{
+														"id": "ragohseo",
+														"text": "람다up = Similarity Score Down,Gain down -&gt; Prune이 쉬워지고, Overfitting방지"
+													}
+												]
+											},
+											{
+												"id": "stkoixsd",
+												"text": "Eta : Learning Rate&nbsp;"
+											}
+										]
+									},
+									{
+										"id": "ihlotfsq",
+										"text": "LightGBM",
+										"shape": "box",
+										"children": [
+											{
+												"id": "uzwwbyoo",
+												"text": "GOSS (Gradient_based One-Side Sampling)",
+												"children": [
+													{
+														"id": "fmadpred",
+														"text": "각 데이터들은 서로다른 gradient를 가지므로 서로 information gain이 다르다"
+													},
+													{
+														"id": "naduvtzq",
+														"text": "Large Gradient한 데이터는 갖고가고, Small Gradient한 데이터에서 랜덤선택한다",
+														"children": [
+															{
+																"id": "alqgxmnf",
+																"text": "이후 Small Gradient에서 (1-a)/b 만큼 뻥튀기해준다"
+															}
+														]
+													}
+												]
+											},
+											{
+												"id": "zbpnctrn",
+												"text": "EFB (Exclusive Feature Bundling)",
+												"children": [
+													{
+														"id": "ujdenbhp",
+														"text": "하나의 feature에 대해 특정 두개의 변수가 Non-Zero값을 갖는 경우가 드물다"
+													},
+													{
+														"id": "ujqpmudc",
+														"text": "그리하여 exclusive한 변수들을 번들링해도 성능저하가 거의 없다",
+														"children": [
+															{
+																"id": "roefutri",
+																"text": "conflict 관리를 통해 feature를 줄여서 샘플링한다"
+															}
+														]
+													}
+												]
+											},
+											{
+												"id": "rgbabbhl",
+												"text": "plot_importance()",
+												"children": [
+													{
+														"id": "lxwofqwo",
+														"text": "Feature Importance를 Barplot으로 볼 수 있다"
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": "gstkgsnu",
+						"text": "<b>Voting</b>",
+						"children": [
+							{
+								"id": "idnxeibr",
+								"text": "다른 알고리즘 모델을 조합하여 투표를 통해 결과 도출"
+							}
+						]
+					},
+					{
+						"id": "zzofjnag",
+						"text": "<b>Bagging</b>",
+						"children": [
+							{
+								"id": "hqjigcst",
+								"text": "Random Forests",
+								"children": [
+									{
+										"id": "yrznavlv",
+										"text": "Bootstrap Sampling (복원추출) -&gt; 0.37 OOB샘플 -&gt; validation"
+									}
+								]
+							},
+							{
+								"id": "bxueoome",
+								"text": "같은 알고리즘 모델에서 샘플을 다양하게 중복 생성 (Bootstrap Aggregating)"
+							}
+						]
+					},
+					{
+						"id": "seninyxb",
+						"text": "Stacking",
+						"children": [
+							{
+								"id": "rrcvglpp",
+								"text": "여러 모델을 기반으로 meta 모델"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": "plynvlis",
+				"text": "Evaluation",
+				"layout": "graph-right",
+				"children": [
+					{
+						"id": "cgxtluhc",
+						"text": "<b>Regression</b>",
+						"shape": "ellipse",
+						"children": [
+							{
+								"id": "kwxuxsya",
+								"text": "MSE_Mean Squared Error"
+							},
+							{
+								"id": "zcanglgl",
+								"text": "MAE_Mean Absolute Error"
+							},
+							{
+								"id": "gubohtos",
+								"text": "RMSE_Root Mean Squared Error"
+							},
+							{
+								"id": "kmadrlsb",
+								"text": "R-Square",
+								"children": [
+									{
+										"id": "eprlfjcj",
+										"text": "1-SSE/SST"
+									},
+									{
+										"id": "selencgp",
+										"text": "1에 가까울수록 좋음"
+									},
+									{
+										"id": "zsdzztyx",
+										"text": "관측결과가 평균으로 때린것에 비해 얼마나 좋은가를 나타냄"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": "rpsicqpq",
+						"text": "<b>Classification</b>",
+						"shape": "ellipse",
+						"children": [
+							{
+								"id": "ibqaekqo",
+								"text": "Confusion Matrix",
+								"children": [
+									{
+										"id": "lnjsaaer",
+										"text": "TP",
+										"children": [
+											{
+												"id": "zipvwool",
+												"text": "True Positive :: 모델의 참 결과가 맞는경우"
+											}
+										]
+									},
+									{
+										"id": "rvnzollf",
+										"text": "TN",
+										"children": [
+											{
+												"id": "cofuuxkt",
+												"text": "True Negative :: 모델의 거짓결과가 맞는경우"
+											}
+										]
+									},
+									{
+										"id": "sgeqcaaj",
+										"text": "FP",
+										"children": [
+											{
+												"id": "tlbzbnxs",
+												"text": "False Positive :: 모델의 참 결과가 틀린경우"
+											}
+										]
+									},
+									{
+										"id": "nvvbgzlu",
+										"text": "FN",
+										"children": [
+											{
+												"id": "aawxcvwp",
+												"text": "False Negative :: 모델의 거짓결과가 틀린경우"
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "wosdwgbb",
+								"text": "Precision, Recall",
+								"children": [
+									{
+										"id": "stkmqufk",
+										"text": "Precision :&nbsp; TP / (TP + FP) 정밀도 -&gt; 모델의 참 판단이 얼마나 맞는가"
+									},
+									{
+										"id": "wljcdeqh",
+										"text": "Recall&nbsp; &nbsp; &nbsp; &nbsp; : TP / (TP + FN) 재현률 -&gt; 참인 데이터가 모델에서 얼마나 참 판단을 받았는가"
+									}
+								]
+							},
+							{
+								"id": "sbydwbek",
+								"text": "F1_Score",
+								"children": [
+									{
+										"id": "wsbdllqf",
+										"text": "precision과 recall 의 조화평균&nbsp;",
+										"children": [
+											{
+												"id": "ufswamry",
+												"text": "2 / [ (1/정밀도) + (1/재현률)]"
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "ersfxcls",
+								"text": "ROC_AUC",
+								"children": [
+									{
+										"id": "bwhhyrcy",
+										"text": "이진분류문제에 사용, AUC는 ROC곡선의 아래부분넓이"
+									},
+									{
+										"id": "xgouvplj",
+										"text": "여러 임계값에 대해 TPR , FPR 그래프를 보여줌"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": "pxhrtqzu",
+						"text": "<b>Model Interpreting</b>",
+						"children": [
+							{
+								"id": "rsxgveyp",
+								"text": "pdpbox",
+								"children": [
+									{
+										"id": "ogjceqzn",
+										"text": "pdp_plot"
+									}
+								]
+							},
+							{
+								"id": "muvcanli",
+								"text": "shap",
+								"children": [
+									{
+										"id": "ddqjsbgj",
+										"text": "with JS"
+									}
+								]
+							},
+							{
+								"id": "obhmnkip",
+								"text": "eli5",
+								"children": [
+									{
+										"id": "cdtprzye",
+										"text": "Permutation Importance"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": "xbkiedey",
+				"text": "Encoder",
+				"children": [
+					{
+						"id": "kduwodxi",
+						"text": "<b>OneHot Encoder</b>",
+						"children": [
+							{
+								"id": "qrggpgsw",
+								"text": "pd.get_dummies()"
+							},
+							{
+								"id": "rdyjvpwz",
+								"text": "순서가 없을때, 고유값의 개수가 많지 않을 때"
+							}
+						]
+					},
+					{
+						"id": "wbbnqgwq",
+						"text": "<b>Label Encoder</b>",
+						"children": [
+							{
+								"id": "zmvyduaj",
+								"text": "just labeling"
+							},
+							{
+								"id": "shprhqsl",
+								"text": "숫자를 부여해서 인코딩, 고유값 개수가 많을때&nbsp;"
+							}
+						]
+					},
+					{
+						"id": "aowludpq",
+						"text": "<b>Ordinal Encoder</b>",
+						"children": [
+							{
+								"id": "ilzpettw",
+								"text": "with Ordinal"
+							},
+							{
+								"id": "hrddoryk",
+								"text": "변수의 순서를 유지, 각 변수의 본래 순서를 dictionary를 통해 지정해주면 됨"
+							}
+						]
+					},
+					{
+						"id": "aawscome",
+						"text": "<b>Target Encoder</b>",
+						"children": [
+							{
+								"id": "sregvmfx",
+								"text": "범주형태의 독립변수들이 종속변수의 값들과 상관관계가 있음을 가정하여 인코딩한다.&nbsp;"
+							}
+						]
+					},
+					{
+						"id": "awcoojtg",
+						"text": "<b>Catboost Encoder</b>"
+					}
+				]
+			},
+			{
+				"id": "xmodtyit",
+				"text": "Imputer",
+				"children": [
+					{
+						"id": "rsppspyi",
+						"text": "<b>Simple Imputer</b>"
+					},
+					{
+						"id": "hmeaqorh",
+						"text": "Multiple Imputer"
+					},
+					{
+						"id": "ewgwailo",
+						"text": "Iterative Imputer"
+					}
+				]
+			},
+			{
+				"id": "xsriimkd",
+				"text": "Feature Selection",
+				"children": [
+					{
+						"id": "mocjtwit",
+						"text": "<b>SelectKBest</b>"
+					},
+					{
+						"id": "kgvwcetq",
+						"text": "from pandas_profiling import ProfileReport"
+					}
+				]
+			},
+			{
+				"id": "wisgnmxp",
+				"text": "Parameter Tunning",
+				"children": [
+					{
+						"id": "meubkjjz",
+						"text": "<b>Cross Validation</b>",
+						"children": [
+							{
+								"id": "qnsgcjsi",
+								"text": "RandomizedSearchCV"
+							},
+							{
+								"id": "rdzggyvm",
+								"text": "GridSearchCV"
+							}
+						]
+					},
+					{
+						"id": "uaztzsgz",
+						"text": "BeysianOptimization"
+					}
+				]
+			}
+		]
+	}
+}
